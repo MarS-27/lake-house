@@ -1,0 +1,93 @@
+.button_orange,
+.button_brown,
+.button_outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  line-height: 20px;
+}
+
+.button_orange,
+.button_brown {
+  color: var(--clr-soft-gray);
+}
+
+.button_outline {
+  color: var(--clr-dark-brown);
+}
+
+.button_orange {
+  background: var(--clr-orange);
+}
+
+.button_brown {
+  background: var(--clr-dark-brown);
+}
+
+.button_outline {
+  background: var(--clr-soft-brown);
+  border: 1px solid var(--clr-dark-brown);
+  border-radius: 4px;
+}
+
+.button_orange:hover,
+.button_brown:hover,
+.button_outline:hover {
+  background: var(--clr-blue);
+  transition: 0.8s;
+}
+
+.button_orange:active,
+.button_brown:active,
+.button_outline:active {
+  transform: translateY(5px);
+}
+
+.burger-button {
+  background: inherit;
+  min-width: 36px;
+  min-height: 24px;
+  width: 36px;
+  height: 24px;
+  display: none;
+}
+
+.burger-line {
+  width: 100%;
+  border: none;
+  opacity: 1;
+  height: 3px;
+  background-color: var(--clr-soft-gray);
+  border-radius: 4px;
+}
+
+.burger-button:hover .burger-line {
+  background: var(--clr-blue);
+}
+
+.burger-button-open .burger-line:first-of-type {
+  transform: translateY(10px) rotateZ(45deg) rotateY(45deg);
+  transition: 0.8s;
+}
+
+.burger-button-open .burger-line:nth-child(2n) {
+  display: none;
+}
+
+.burger-button-open .burger-line:last-of-type {
+  transform: translateY(-10px) rotateZ(135deg) rotateY(45deg);
+  transition: 0.8s;
+}
+
+@media (max-width: 768px) {
+  .burger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-self: end;
+  }
+}

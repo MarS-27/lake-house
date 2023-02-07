@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Merriweather-Regular";
+  src: url("../fonts/Merriweather-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Merriweather-Bold";
+  src: url("../fonts/Merriweather-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../fonts/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url("../fonts/Lato-Light.ttf");
+}
+
+.heading-lg,
+.heading-md {
+  font-family: "Merriweather-Bold";
+  font-weight: 700;
+}
+
+.heading-sm {
+  font-family: "Merriweather-Regular";
+  font-weight: 400;
+}
+
+.heading-xs,
+.body-md-bold {
+  font-family: "Lato-Bold";
+  font-weight: 500;
+}
+
+.body-lg,
+.body-md {
+  font-family: "Lato-Light";
+  font-weight: 300;
+}
+
+.heading-lg {
+  font-size: 80px;
+  line-height: 96px;
+}
+
+.heading-md {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.heading-sm {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.heading-xs {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.body-lg {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.body-md,
+.body-md-bold {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .heading-lg {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .heading-md {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .heading-sm {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}

@@ -1,0 +1,29 @@
+:root {
+  /* Colors */
+  --clr-blue: #61b4f9;
+  --clr-orange: #e08631;
+
+  --clr-soft-gray: #fdfcfc;
+  --clr-light-gray: #504b49;
+  --clr-gray: #353231;
+  --clr-dark-gray: #1b1918;
+
+  --clr-soft-brown: #eee4dd;
+  --clr-light-brown: #d7c0ae;
+  --clr-brown: #967e76;
+  --clr-dark-brown: #5f4f49;
+  --clr-dark-brown-opacity: rgba(95, 79, 73, 0.6);
+
+  /* Gaps */
+
+  --gap-xs: 4px;
+  --gap-s: 8px;
+  --gap-m: 16px;
+  --gap-l: 24px;
+  --gap-xl: 32px;
+  --gap-xxl: 64px;
+
+  /* Transition */
+
+  --transition: 0.8s;
+}

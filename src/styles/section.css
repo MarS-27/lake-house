@@ -1,0 +1,229 @@
+/* Backgrounds */
+
+.section-brown-bg {
+  padding: 96px 0;
+  background-color: var(--clr-soft-brown);
+}
+
+.section-soft-gray-bg {
+  padding: 96px 0;
+  background-color: var(--clr-soft-gray);
+}
+
+/* About */
+
+.section-about {
+  display: grid;
+  grid-template-columns: 320px 1fr 1fr;
+  gap: var(--gap-l);
+}
+
+.section-about-img {
+  width: 100%;
+  height: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.section-about-text {
+  color: var(--clr-gray);
+  gap: var(--gap-m);
+}
+
+.section-about hr {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+/* Other sections */
+
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 72px;
+}
+
+.section-content:has(.section-two-cols) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-l);
+  margin-top: 48px;
+}
+
+.section-content:has(.section-come-together) {
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--gap-l);
+  margin-top: 0;
+}
+
+.section-content:has(.motto) {
+  display: block;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-content:has(.section-buttons) {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-header-title {
+  margin: var(--gap-xl) 0 var(--gap-s) 0;
+  color: var(--clr-dark-gray);
+}
+
+.section-header-text {
+  color: var(--clr-gray);
+  max-width: 590px;
+}
+
+.section-content:has(.section-buttons) .section-header-text {
+  max-width: 800px;
+}
+
+.section-content-item {
+  gap: var(--gap-m);
+}
+
+.section-content-item-title {
+  color: var(--clr-gray);
+  margin-bottom: var(--gap-xs);
+}
+
+.section-content-item-text {
+  color: var(--clr-gray);
+}
+
+.section-sleeping-aragements {
+  gap: 48px;
+}
+
+.section-sleeping-aragements svg {
+  min-width: 60px;
+  width: 60px;
+  height: 60px;
+}
+
+.section-two-cols {
+  gap: var(--gap-xl);
+}
+
+.section-two-cols .section-content-item-title {
+  margin-bottom: 0;
+}
+
+.section-soft-gray-bg .section-content-item-text,
+.section-soft-gray-bg .section-header-text {
+  color: var(--clr-light-gray);
+}
+
+.section-come-together {
+  max-width: 500px;
+}
+
+.section-buttons {
+  margin-top: var(--gap-xl);
+  gap: var(--gap-m);
+}
+
+/* Divider */
+
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--clr-orange);
+  border-radius: 2px;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  .section-about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "about-img about-img";
+  }
+
+  .section-about-img {
+    max-width: 422px;
+    min-width: 343px;
+    justify-self: center;
+    grid-area: about-img;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-brown-bg,
+  .section-soft-gray-bg {
+    padding: 24px 0;
+  }
+
+  .section-about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first-about-text"
+      "last-about-text"
+      "about-img";
+  }
+
+  .section-about-img {
+    height: 225px;
+  }
+
+  .section-about hr {
+    align-self: center;
+    margin-top: auto;
+  }
+
+  .section-about-text:first-of-type {
+    grid-area: first-about-text;
+  }
+
+  .section-about-text:last-of-type {
+    grid-area: last-about-text;
+  }
+
+  .section-content,
+  .section-content:has(.section-two-cols) {
+    grid-template-columns: 1fr;
+    margin-top: var(--gap-xl);
+  }
+
+  .section-content:has(.section-come-together) {
+    grid-template-columns: 1fr;
+    gap: var(--gap-m);
+  }
+
+  .section-sleeping-aragements {
+    gap: calc(48px / 2);
+  }
+
+  .grid-content:has(.section-sleeping-aragements) .placement-center {
+    align-self: flex-start;
+    align-items: flex-start;
+  }
+
+  .grid-content:has(.section-sleeping-aragements) .text-center {
+    text-align: left;
+  }
+
+  .section-sleeping-aragements .flex-col {
+    flex-direction: row;
+  }
+
+  .section-content:has(.motto) {
+    max-width: 343px;
+  }
+
+  .section-header-title {
+    margin: var(--gap-m) 0 var(--gap-xs) 0;
+  }
+
+  .section-header-text {
+    max-width: 440px;
+  }
+
+  .section-content:has(.section-come-together) .section-content-item {
+    width: 288px;
+  }
+}

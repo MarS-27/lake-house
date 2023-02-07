@@ -1,0 +1,133 @@
+.footer {
+  padding: 96px 0;
+  background-color: var(--clr-dark-brown);
+  color: var(--clr-soft-gray);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "contacts form"
+    "address address";
+  gap: 80px 0;
+}
+
+.footer-contacts {
+  grid-area: contacts;
+  gap: var(--gap-xl);
+}
+
+.footer-contacts .flex-row,
+.footer-contacts .social {
+  gap: var(--gap-l);
+}
+
+.footer-contacts .social-icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.body-md-bold span {
+  margin-left: var(--gap-s);
+}
+
+.body-md-bold a {
+  color: var(--clr-soft-gray);
+  margin-left: var(--gap-s);
+}
+
+.body-md-bold a:hover {
+  color: var(--clr-blue);
+}
+
+.footer-form {
+  grid-area: form;
+}
+
+.footer-form .body-md-bold {
+  margin-bottom: var(--gap-xs);
+}
+
+.footer-form .body-md {
+  max-width: 592px;
+  margin-bottom: var(--gap-m);
+}
+
+.footer-email-box {
+  position: relative;
+}
+
+.footer-email-input {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--gap-m);
+  background: var(--clr-soft-gray);
+  border-radius: 8px;
+  color: var(--clr-gray);
+}
+
+.footer-email-input:focus {
+  outline: var(--clr-blue) solid 2px;
+}
+
+.footer-email-submit {
+  position: absolute;
+  width: 70px;
+  height: 32px;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+}
+
+.footer-address {
+  grid-area: address;
+  justify-self: center;
+}
+
+.footer-logo {
+  display: block;
+  min-width: 110px;
+  margin: 0 auto var(--gap-l) auto;
+  width: 140px;
+  height: 60px;
+  min-width: 110px;
+  min-width: 50px;
+}
+
+.footer-address p:first-of-type {
+  margin-bottom: var(--gap-s);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 24px 0;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "contacts"
+      "form"
+      "address";
+    gap: 40px;
+  }
+
+  .footer-contacts {
+    grid-area: contacts;
+    gap: var(--gap-m);
+  }
+
+  .footer-email-input {
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 110px;
+    height: 50px;
+  }
+}
