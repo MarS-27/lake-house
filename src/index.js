@@ -66,33 +66,35 @@ function renderRateStars(rate) {
 }
 
 function renderFeedbackCard() {
-  feedbackFromPeople.forEach((feedback) => {
-    const feedbackCard = `
-            <div class="swiper-slide feedback-card flex-col">
-                <div class="feedback-card-header flex-col">
-                    <div class="feedback-rate flex-row">
-                        ${renderRateStars(feedback.rate)}
-                    </div>
-                    <p class="heading-xs">${feedback.title}</p>
-                </div>
-                <p class="body-md">
-                    ${feedback.feedback}
-                </p>
-                <p class="feedback-card-author-info body-md">
-                    ${feedback.author}
-                </p>
-            </div>
-        `;
-    feedbackBlock.insertAdjacentHTML("beforeend", feedbackCard);
-  });
+  const feedbackCard = feedbackFromPeople.map(feedback => {
+    return `
+      <div class="swiper-slide feedback-card flex-col">
+          <div class="feedback-card-header flex-col">
+              <div class="feedback-rate flex-row">
+                  ${renderRateStars(feedback.rate)}
+              </div>
+              <p class="heading-xs">${feedback.title}</p>
+          </div>
+          <p class="body-md">
+              ${feedback.feedback}
+          </p>
+          <p class="feedback-card-author-info body-md">
+              ${feedback.author}
+          </p>
+      </div>
+    `;
+  }).join("");
+  
+  feedbackBlock.insertAdjacentHTML("beforeend", feedbackCard);
 }
 
 renderFeedbackCard();
 
 const swiper = new Swiper(".swiper-init", {
-  slidesPerView: "auto",
+  slidesPerView: 2,
   centeredSlides: true,
   spaceBetween: 24,
+  initialSlide: 0,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
