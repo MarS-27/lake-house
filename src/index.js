@@ -91,11 +91,9 @@ function renderFeedbackCard() {
 renderFeedbackCard();
 
 const swiper = new Swiper(".swiper-init", {
-  slidesPerView: 2,
-  centeredSlides: true,
+  slidesPerView: "auto",
   spaceBetween: 24,
-  initialSlide: 0,
-  loop: true,
+  centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
